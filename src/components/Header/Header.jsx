@@ -1,10 +1,10 @@
-import React from 'react';
-import Button from "../Button/Button";
-import { useTelegram } from "../../hooks/useTelegram";
-import './Header.css';
+import React from 'react'
+import Button from "../Button/Button"
+import { useTelegram } from "../../hooks/useTelegram"
+import './Header.css'
 
 const Header = () => {
-    const { user, onClose } = useTelegram();
+    const { user, onClose } = useTelegram()
 
     return (
         <div className={'header'}>
@@ -13,7 +13,7 @@ const Header = () => {
                 {user?.username}
             </span>
         </div>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header
