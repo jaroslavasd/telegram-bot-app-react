@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './componenets/Header';
+import Header from './components/Header/Header';
 import { useTelegram } from './hooks/useTelegram';
 
 function App()  {
