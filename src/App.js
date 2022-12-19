@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './componenets/Header';
 import { useTelegram } from './hooks/useTelegram';
 
 function App()  {
@@ -8,7 +9,8 @@ function App()  {
 
   return (
     <div className="App">
-     <button onClick={onToggleButton}>toggle</button>
+      <Header />
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
