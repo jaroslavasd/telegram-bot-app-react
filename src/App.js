@@ -17,6 +17,7 @@ function App()  {
       <button onClick={onToggleButton}>toggle</button> */}
       <Routes>
         <Route index element={<ProductList />}/>
+        <Route path={'products'} element={<ProductList />}/>
         <Route path={'form'} element={<Form />}/>
       </Routes>
     </div>
