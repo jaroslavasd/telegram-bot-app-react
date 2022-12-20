@@ -27,7 +27,7 @@ const ProductList = () => {
             queryId,
         }
 
-        fetch('https://telegram-bot-nivazhna.onrender.com/status', {
+        fetch('https://telegram-bot-nivazhna.onrender.com/web-app', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
