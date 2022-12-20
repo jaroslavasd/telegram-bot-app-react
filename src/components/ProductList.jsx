@@ -43,11 +43,15 @@ const ProductList = () => {
         }
     }, [onSendData])
 
+    const isAdded = (product) => {
+        return !!addedItems.find(item => item.id === product.id)
+    }
+
     const onAdd = (product) => {
-        const alreadyAdded = addedItems.find(item => item.id === product.id)
+        // const alreadyAdded = addedItems.find(item => item.id === product.id)
         let newItems = []
 
-        if(alreadyAdded) {
+        if(isAdded(product)) {
             newItems = addedItems.filter(item => item.id !== product.id)
         } else {
             newItems = [...addedItems, product]
@@ -60,7 +64,7 @@ const ProductList = () => {
         } else {
             tg.MainButton.show()
             tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`
+                text: `Купить - ${getTotalPrice(newItems)}`
             })
         }
     }
@@ -70,8 +74,9 @@ const ProductList = () => {
             {products.map(item => (
                 <ProductItem
                     product={item}
-                    onAdd={onAdd}
                     className={'item'}
+                    onAdd={onAdd}
+                    isAdded={isAdded}
                 />
             ))}
         </div>
