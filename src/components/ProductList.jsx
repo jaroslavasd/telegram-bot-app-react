@@ -44,7 +44,7 @@ const ProductList = () => {
     }, [onSendData])
 
     const isAdded = (product) => {
-        return !!addedItems.find(item => item.id === product.id)
+        return addedItems.find(item => item.id === product.id).length > 0
     }
 
     const onAdd = (product) => {
