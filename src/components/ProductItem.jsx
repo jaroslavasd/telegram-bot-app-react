@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
 import './css/ProductItem.css'
 
-const ProductItem = ({ product, className, onAdd, isAdded }) => {
+const ProductItem = ({ product, className, onAdd }) => {
+    const [textOnButton, setTextOnButton] = useState('Добавить в корзину')
 
     const onAddHandler = () => {
         onAdd(product)
+        setTextOnButton((product.isInBasket) ? 'Убрать из корзины' : 'Добавить в корзину')
     }
 
     return (
@@ -16,9 +18,7 @@ const ProductItem = ({ product, className, onAdd, isAdded }) => {
             <div className={'price'}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
-            <Button className={'add-btn'} onClick={onAddHandler}>
-                {isAdded ? 'Убрать из корзины' : 'Добавить в корзину'}
-            </Button>
+            <Button className={'add-btn'} onClick={onAddHandler} children={textOnButton}/>
         </div>
     )
 }
