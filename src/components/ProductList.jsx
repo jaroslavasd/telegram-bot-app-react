@@ -4,14 +4,14 @@ import ProductItem from './ProductItem'
 import './css/ProductList.css'
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые', isInBasket: false},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая', isInBasket: false},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые', isInBasket: false},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая', isInBasket: false},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые', isInBasket: false},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая', isInBasket: false},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые', isInBasket: false},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая', isInBasket: false},
+    {id: '1', title: 'Джинсы', description: 'Синего цвета, прямые', img: '../../public/img/logo512.png', price: 5000, isInBasket: false},
+    {id: '2', title: 'Куртка', description: 'Зеленого цвета, теплая', price: 12000, isInBasket: false},
+    {id: '3', title: 'Джинсы 2', description: 'Синего цвета, прямые', price: 5000, isInBasket: false},
+    {id: '4', title: 'Куртка 8', description: 'Зеленого цвета, теплая', price: 122, isInBasket: false},
+    {id: '5', title: 'Джинсы 3', description: 'Синего цвета, прямые', price: 5000, isInBasket: false},
+    {id: '6', title: 'Куртка 7', description: 'Зеленого цвета, теплая', price: 600, isInBasket: false},
+    {id: '7', title: 'Джинсы 4', description: 'Синего цвета, прямые', price: 5500, isInBasket: false},
+    {id: '8', title: 'Куртка 5', description: 'Зеленого цвета, теплая', price: 12000, isInBasket: false},
 ]
 
 const getTotalPrice = (items = []) => items.reduce((acc, item) => acc += item.price, 0)

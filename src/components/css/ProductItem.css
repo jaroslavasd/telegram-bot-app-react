@@ -6,13 +6,12 @@
   width: 170px;
 }
 
-
-.img {
-  width: 100%;
+img {
   background: lightgray;
-  height: 100px;
-  margin: 0 auto;
   background: var(--tg-theme-button-color);
+  width: 100px;
+  height: 100px;
+  padding: 10px;
 }
 
 .description {
